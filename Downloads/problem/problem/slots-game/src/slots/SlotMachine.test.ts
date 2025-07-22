@@ -1,12 +1,10 @@
 import * as PIXI from 'pixi.js';
 import { SlotMachine } from './SlotMachine';
 
-// Заглушка для sound.play, чтобы не вызывать настоящий звук
 jest.mock('../utils/sound', () => ({
   sound: { play: jest.fn() }
 }));
 
-// Заглушка для AssetLoader, чтобы не подгружать реальные ассеты
 jest.mock('../utils/AssetLoader', () => ({
   AssetLoader: {
     getTexture: jest.fn().mockReturnValue({}),
@@ -14,7 +12,6 @@ jest.mock('../utils/AssetLoader', () => ({
   }
 }));
 
-// Заглушка для Reel (если нужно)
 jest.mock('./Reel', () => {
   return {
     Reel: jest.fn().mockImplementation(() => ({
@@ -31,7 +28,6 @@ describe('SlotMachine', () => {
   let slotMachine: SlotMachine;
 
   beforeEach(() => {
-    // Создаем "пустое" приложение PIXI
     app = new PIXI.Application({ width: 800, height: 600 });
     slotMachine = new SlotMachine(app);
   });
