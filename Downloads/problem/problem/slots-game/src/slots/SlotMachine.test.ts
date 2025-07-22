@@ -128,6 +128,15 @@ export class SlotMachine {
 
             if (this.winAnimation) {
                 // TODO: Play the win animation found in "big-boom-h" spine
+                if (this.winAnimation) {
+    this.winAnimation.visible = true;
+    this.winAnimation.state.setAnimation(0, 'boom', false);
+    this.winAnimation.state.addListener({
+        complete: () => {
+            this.winAnimation!.visible = false;
+        }
+    });
+}
             }
         }
     }
@@ -149,7 +158,7 @@ export class SlotMachine {
                     this.frameSpine.state.setAnimation(0, 'idle', true);
                 }
 
-                this.container.addChild(this.frameSpine);
+                this.container.addChild(this.frameSpine as unknown as PIXI.DisplayObject);
             }
 
             const winSpineData = AssetLoader.getSpine('big-boom-h.json');
@@ -161,7 +170,7 @@ export class SlotMachine {
 
                 this.winAnimation.visible = false;
 
-                this.container.addChild(this.winAnimation);
+                this.container.addChild(this.winAnimation as unknown as PIXI.DisplayObject);
             }
         } catch (error) {
             console.error('Error initializing spine animations:', error);
