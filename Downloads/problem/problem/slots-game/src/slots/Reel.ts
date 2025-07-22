@@ -31,7 +31,7 @@ private createSymbols(): void {
     // Create symbols for the reel, arranged horizontally
     for (let i = 0; i < this.symbolCount; i++) {
         const symbol = this.createRandomSymbol();
-        symbol.x = i * this.symbolSize; // Горизонтальное размещение
+        symbol.x = i * this.symbolSize; 
         symbol.y = 0;
         this.container.addChild(symbol);
         this.symbols.push(symbol);
