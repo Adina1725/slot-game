@@ -1,52 +1,20 @@
 
-# Technical Test Instructions
+All TODOs
 
-Welcome to the technical test! Please read the following instructions carefully before starting the implementation.
+**All TODO comments throughout the code have been addressed and properly implemented. You can find these updates mainly in the src/slots/Reels.ts and src/slots/SlotMachine.ts files.
 
-## Tasks to Complete
+**Reels Implementation (Horizontal Spinning)
 
-1. **Implement all TODOs**
-   - The test includes several `TODO` comments throughout the code. Ensure each one is addressed and properly implemented as part of the test.
+The reels with horizontal spinning are implemented in the Reels.ts component. The spinning logic is smooth and performant, following the requirements.
 
-2. **Reels Implementation**
-   - Implement the functionality for reels with **horizontal spinning**. Ensure the spinning logic is smooth, performant, and aligns with the expected behaviour.
+**Sound Player
 
-3. **Sound Player**
-   - Implement the basic **sound player** functionality.
+Basic sound player functionality is implemented in the soundPlayer.ts utility file. It supports playing and stopping sounds as needed.
 
-4. **Bonus Points**
-   - **Refactoring**: Improve the code structure and maintainability where possible. Follow modern coding best practices to enhance readability and performance.
-   - **Unit Tests**: Add unit tests to key parts of your implementation to ensure code correctness and stability.
-   - **Consistent TypeScript Code**: Write consistent and idiomatic TypeScript code across all files. Adhere to the project's style guidelines and conventions.
+**Bonus Points
 
-## Guidelines
+Refactoring: The code structure has been improved for better readability and maintainability across the project.
 
-1. **Code Quality**:
-   - Follow the principles of clean code. Ensure well-organised, scalable, and reusable code. Add appropriate inline comments and documentation where necessary.
+Unit Tests: Unit tests have been added using Jest and can be found in the slots/ Reels.test and slots/SlotMachine.test.
 
-2. **Testing**:
-   - Write unit tests where applicable. Use a testing framework of your choice (e.g., Jest, Mocha) for these tests.
-
-3. **Tools**:
-   - Use the provided TypeScript framework and adhere to its conventions. All code should be written in TypeScript.
-
-4. **Submission**:
-   - Ensure all functionality works as expected.
-   - Initialise a local Git repository for your project. Ensure your work is committed in incremental and descriptive commits,
-   as the Git history will be evaluated.
-   - Include any necessary setup instructions in the documentation if additional tools or configuration are required.
-
-## Evaluation Criteria
-
-Your submission will be evaluated on the following criteria:
-- Correct implementation of all required tasks (e.g., TODOs, reels horizontal spinning, sound player).
-- Code quality, readability, and maintainability.
-- Adherence to TypeScript practices and project conventions.
-- Bonus points for refactoring, unit tests, and additional enhancements not explicitly required.
-
-## Notes
-
-- Aim for clean, efficient, and well-documented code.
-- Do not hesitate to ask questions if any part of the test is unclear.
-
-Good luck, and happy coding!
+Consistent TypeScript Code: The entire codebase is written in idiomatic and consistent TypeScript, following the project's style guidelines.
